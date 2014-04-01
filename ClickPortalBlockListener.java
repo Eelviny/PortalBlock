@@ -1,4 +1,4 @@
-package portalBlock;
+package PortalBlock;
 
 import java.util.HashMap;
 
@@ -19,6 +19,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.scheduler.BukkitTask;
+
+// this comment is a test
 
 public class ClickPortalBlockListener implements Listener {
 	
