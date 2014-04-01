@@ -7,7 +7,6 @@ import java.util.HashMap;
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
-import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -92,15 +91,14 @@ public class PortalBlock extends JavaPlugin{
 			}
 			
 			if( sender.hasPermission("portalblock.command")){
-				if(args.length == 1){
+				if(args.length > 1){
 					
 					Player player = (Player) sender;
 					PortalFile pt = new PortalFile();
 					PortalPoint portalPoint = pt.getPoint(StringUtils.join(args, " "));
 					if(portalPoint != null){
 						player.teleport(portalPoint.getLocation());
-						player.sendMessage(messageData.get("portalblock.command.teleport").replace("%point%", args[0]));
-						player.getWorld().playSound( player.getLocation(),Sound.ENDERMAN_TELEPORT,5, 1);
+						player.sendMessage(messageData.get("portalblock.command.teleport").replace("%point%", portalPoint.getName()));
 					}else{
 						player.sendMessage(messageData.get("portalblock.command.notexist")
 								.replace("%point%", args[0]));
