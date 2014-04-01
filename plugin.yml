@@ -1,6 +1,6 @@
 name: PortalBlock
 main: portalBlock.PortalBlock
-version: 1.2.3
+version: 1.2.4
 description: PortalBlock provides a way for players to teleport quickly using ender portal blocks for a hefty price.
 author: JayLegoMine14
 website: http://justgame.co/
