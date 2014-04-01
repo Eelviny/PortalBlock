@@ -1,4 +1,4 @@
-package portalBlock;
+package PortalBlock;
 
 import java.util.ArrayList;
 

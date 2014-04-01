@@ -1,4 +1,4 @@
-package portalBlock;
+package PortalBlock;
 
 import java.util.HashMap;
 
@@ -168,7 +168,6 @@ public class GetResponseTask extends BukkitRunnable {
 									PortalHandlers.toggleEye(block, false);
 									PortalBlock.setNotUse(player.getDisplayName());
 									player.sendMessage(messageData.get("portalblock.teleport").replace("%point%", portalPoint.getName()));
-									player.getWorld().playSound( player.getLocation(),Sound.ENDERMAN_TELEPORT,5, 1);
 								
 									if(PortalBlock.sendConsoleMessage())
 										PortalBlock.getConsole().sendMessage(messageData.get("portalblock.console.teleport")
