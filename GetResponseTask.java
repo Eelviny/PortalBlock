@@ -23,8 +23,6 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 public class GetResponseTask extends BukkitRunnable {
 	
-	//testing
-	
 	private HashMap<String, String> messageData = PortalBlock.getMessageData();
 	 
 		private String responce = null;
