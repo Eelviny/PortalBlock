@@ -1,4 +1,4 @@
-package PortalBlock;
+package portalBlock;
 
 import java.io.File;
 import java.io.IOException;

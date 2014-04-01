@@ -1,9 +1,10 @@
-package PortalBlock;
+package portalBlock;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 
+import org.apache.commons.lang.StringUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.Sound;
@@ -95,7 +96,7 @@ public class PortalBlock extends JavaPlugin{
 					
 					Player player = (Player) sender;
 					PortalFile pt = new PortalFile();
-					PortalPoint portalPoint = pt.getPoint(args[0]);
+					PortalPoint portalPoint = pt.getPoint(StringUtils.join(args, " "));
 					if(portalPoint != null){
 						player.teleport(portalPoint.getLocation());
 						player.sendMessage(messageData.get("portalblock.command.teleport").replace("%point%", args[0]));

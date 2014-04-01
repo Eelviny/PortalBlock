@@ -1,4 +1,4 @@
-package PortalBlock;
+package portalBlock;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
