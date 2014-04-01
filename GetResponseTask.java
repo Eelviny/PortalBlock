@@ -23,6 +23,8 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 public class GetResponseTask extends BukkitRunnable {
 	
+	//testing
+	
 	private HashMap<String, String> messageData = PortalBlock.getMessageData();
 	 
 		private String responce = null;
@@ -48,8 +50,8 @@ public class GetResponseTask extends BukkitRunnable {
 	    		Block block, String mode) {
 	    	this.message = message;
 	    	this.mode = mode;
-	    	this.denyMessage = denyMessage;
-			this.player = player;
+	        this.denyMessage = denyMessage;
+		    this.player = player;
 			this.time = time;
 			this.distance = distance;
 			this.block = block;
