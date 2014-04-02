@@ -20,6 +20,7 @@ import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.scheduler.BukkitTask;
 
+// test comment
 
 public class ClickPortalBlockListener implements Listener {
 	
