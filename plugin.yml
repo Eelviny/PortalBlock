@@ -1,0 +1,22 @@
+name: PortalBlock
+main: portalBlock.PortalBlock
+version: 1.2.4
+description: PortalBlock provides a way for players to teleport quickly using ender portal blocks for a hefty price.
+author: JayLegoMine14
+website: http://justgame.co/
+commands:
+   portal:
+      description: Allows the player to teleport to the specified ender portal block.
+      usage: /<command>
+permissions:
+   portalblock.*:
+      description: Gives access to all quickchat commands and actions.
+      children:
+        portalblock.use: true
+        portalblock.command: true
+   portalblock.use:
+      description: Give Player permission to use the portal block plugin.
+      default: true
+   portalblock.command:
+      description: Give Player access to the /portal command.
+      default: op
