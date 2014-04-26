@@ -157,7 +157,7 @@ public class GetResponseTask extends BukkitRunnable {
 								if(portalPoint.equals(pt.getPoint(block.getLocation()))){
 									player.sendMessage(messageData.get("portalblock.same"));
 									cancelTeleport();
-								}else if (block.getWorld().getBlockAt(portalPoint.getLocation()).getType() 
+								}else if (portalPoint.getWorld().getBlockAt(portalPoint.getLocation()).getType() 
 										    != Material.ENDER_PORTAL_FRAME){
 									player.sendMessage(messageData.get("portalblock.notexist")
 											.replace("%point%", id));
