@@ -1,4 +1,4 @@
-package portalBlock;
+package co.justgame.portalblock.point;
 
 import java.util.HashMap;
 import java.util.Random;
@@ -14,6 +14,9 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import co.justgame.portalblock.io.PortalFile;
+import co.justgame.portalblock.main.PortalBlock;
+
 
 public class PortalHandlers {
 	
@@ -28,16 +31,18 @@ public class PortalHandlers {
 		
 		if(!event.isCancelled()){
 			
-			PortalFile pt = new PortalFile();
+		    PortalFile pt = new PortalFile();
 			
 			ItemStack is = new ItemStack(Material.ENDER_PORTAL_FRAME);
 			PortalPoint portalPoint = pt.getPoint(block.getLocation());
-			if(portalPoint != null){
 				String blockName = portalPoint.getName();
 				is = copyName(is, blockName);
 	
-				player.getWorld().dropItemNaturally(block.getLocation(), is);
-				pt.removePoint(block.getLocation());
+				if(!player.getGameMode().equals(GameMode.CREATIVE)){
+				    player.getWorld().dropItemNaturally(block.getLocation(), is);
+				}
+
+		        pt.removePoint(block.getLocation());
 				
 				if(hasEye(block)){
 					player.getWorld().dropItemNaturally(block.getLocation(), new ItemStack(Material.EYE_OF_ENDER));
@@ -46,18 +51,12 @@ public class PortalHandlers {
 				if(PortalBlock.sendConsoleMessage())
 					PortalBlock.getConsole().sendMessage(messageData.get("portalblock.console.break")
 							.replace("%player%", player.getDisplayName()).replace("%name%", blockName));
-			}else{
-				player.getWorld().dropItemNaturally(block.getLocation(), is);
-				if(hasEye(block)){
-					player.getWorld().dropItemNaturally(block.getLocation(), new ItemStack(Material.EYE_OF_ENDER));
-				}
-			}
+				
 				block.setType(Material.AIR);
 				if(!player.getGameMode().equals(GameMode.CREATIVE)){
 					player.getWorld().playEffect(block.getLocation(), Effect.STEP_SOUND, 120, 100);
 					player.getWorld().playSound(player.getLocation(), Sound.GLASS, 1, (float) .8 );
 				}
-			
 		}
 	}
 	

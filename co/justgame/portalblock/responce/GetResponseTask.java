@@ -1,4 +1,4 @@
-package portalBlock;
+package co.justgame.portalblock.responce;
 
 import java.util.HashMap;
 
@@ -20,6 +20,11 @@ import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
+
+import co.justgame.portalblock.io.PortalFile;
+import co.justgame.portalblock.main.PortalBlock;
+import co.justgame.portalblock.point.PortalHandlers;
+import co.justgame.portalblock.point.PortalPoint;
 
 public class GetResponseTask extends BukkitRunnable {
 	

@@ -1,4 +1,4 @@
-package portalBlock;
+package co.justgame.portalblock.responce;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -12,6 +12,8 @@ import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
+
+import co.justgame.portalblock.main.PortalBlock;
 
 
 public class Responce {

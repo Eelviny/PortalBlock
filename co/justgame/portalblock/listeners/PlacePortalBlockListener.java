@@ -1,4 +1,4 @@
-package portalBlock;
+package co.justgame.portalblock.listeners;
 
 import java.util.HashMap;
 import java.util.Random;
@@ -10,6 +10,10 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.inventory.meta.ItemMeta;
+
+import co.justgame.portalblock.io.PortalFile;
+import co.justgame.portalblock.main.PortalBlock;
+import co.justgame.portalblock.point.PortalPoint;
 
 public class PlacePortalBlockListener implements Listener {
 	

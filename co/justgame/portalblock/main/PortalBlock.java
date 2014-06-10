@@ -1,4 +1,4 @@
-package portalBlock;
+package co.justgame.portalblock.main;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,6 +18,11 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import co.justgame.portalblock.io.PortalFile;
+import co.justgame.portalblock.listeners.ClickPortalBlockListener;
+import co.justgame.portalblock.listeners.PlacePortalBlockListener;
+import co.justgame.portalblock.point.PortalPoint;
 
 public class PortalBlock extends JavaPlugin{
 	

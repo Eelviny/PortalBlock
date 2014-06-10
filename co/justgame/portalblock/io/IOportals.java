@@ -1,4 +1,4 @@
-package portalBlock;
+package co.justgame.portalblock.io;
 
 import java.io.File;
 import java.io.IOException;
@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
+
+import co.justgame.portalblock.main.PortalBlock;
+import co.justgame.portalblock.point.PortalPoint;
 
 public class IOportals {
 	

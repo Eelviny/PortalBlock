@@ -1,4 +1,4 @@
-package portalBlock;
+package co.justgame.portalblock.point;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;

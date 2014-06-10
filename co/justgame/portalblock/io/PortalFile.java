@@ -1,9 +1,11 @@
-package portalBlock;
+package co.justgame.portalblock.io;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
 import org.bukkit.Location;
+
+import co.justgame.portalblock.point.PortalPoint;
 
 
 public class PortalFile {
